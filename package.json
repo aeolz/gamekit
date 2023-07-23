@@ -1,0 +1,43 @@
+{
+  "name": "@aeolz/gamekit",
+  "version": "1.0.4",
+  "description": "Aeolz Game Kit",
+  "main": "lib/index.js",
+  "scripts": {
+    "test:watch": "nodemon src/test/index.ts",
+    "build": "rm -rf lib && tsc",
+    "build:publish": "npm run build && npm publish --force"
+  },
+  "keywords": [
+    "game",
+    "gameloop",
+    "intersects",
+    "hitbox",
+    "2d"
+  ],
+  "author": {
+    "name": "Dann",
+    "email": "vmakichyan0@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aeolz/gamekit.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/intersects": "^2.5.0",
+    "@types/node": "^20.4.4",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@aeolz/core": "^1.0.5",
+    "anytool": "^1.0.2",
+    "glob": "^10.3.3",
+    "intersects": "^2.7.2"
+  }
+}
