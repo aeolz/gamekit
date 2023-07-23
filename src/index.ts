@@ -8,6 +8,7 @@ export { Converter } from "./objects/Converter"
 export { GameMath } from "./objects/GameMath"
 export { TokenCollection } from "./objects/TokenCollection"
 export { GameKitTemplates } from "./objects/Templates"
+export { Loader } from "./objects/Loader"
 export { GameKitSignalMiddlewares } from "./objects/SignalMiddlewares"
 
 export type Vector2d = {
@@ -128,3 +129,4 @@ export function createGameLoop(
 ) {
   return new GameLoop(name, { fps, ...options })
 }
+
