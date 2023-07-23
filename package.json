@@ -1,6 +1,6 @@
 {
   "name": "@aeolz/gamekit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Aeolz Game Kit",
   "main": "lib/index.js",
   "scripts": {

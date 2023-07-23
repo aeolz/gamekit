@@ -1,7 +1,6 @@
 import Aeolz from "@aeolz/core"
 import { LoopOptions } from "@aeolz/core/lib/objects/Loop"
 import { universalWithin } from "./objects/UniversalHitbox"
-
 export * as intersects from "intersects"
 export { Shape } from "./objects/Shape"
 export { Converter } from "./objects/Converter"
@@ -129,4 +128,3 @@ export function createGameLoop(
 ) {
   return new GameLoop(name, { fps, ...options })
 }
-
