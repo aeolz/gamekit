@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aeolz/core@^1.0.5":
+"@aeolz/core@^1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@aeolz/core/-/core-1.0.8.tgz#9acf588b6c198f8cf90f85dc2bf6103bc00c14f9"
   integrity sha512-hbICpMaTG5wYD4F6Uwxvda8tmXuJujxPFSxU7bRzjNyUaCozwSSO1aSd1AQYfXPlHSRW5Y8z9GoiJHP7PHqLPw==
