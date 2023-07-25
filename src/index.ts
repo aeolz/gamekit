@@ -9,6 +9,7 @@ export { TokenCollection } from "./objects/TokenCollection"
 export { GameKitTemplates } from "./objects/Templates"
 export { Loader } from "./objects/Loader"
 export { GameKitSignalMiddlewares } from "./objects/SignalMiddlewares"
+export { AreaBasedItems } from "./objects/AreaBasedItems"
 
 export type Vector2d = {
   x: number
