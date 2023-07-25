@@ -58,6 +58,19 @@ export function combineVectores(...vectores: Vector2d[]): Vector2d | null {
   )
 }
 
+export function combineSizes(...sizes: Size[]): Size | null {
+  const [first, ...others] = sizes
+  if (!isSize(first)) return null
+  return others.reduce(
+    (aggr, vector) => {
+      if (Aeolz.Utils.isNumber(vector?.width)) aggr.width += vector.width
+      if (Aeolz.Utils.isNumber(vector?.height)) aggr.height += vector.height
+      return aggr
+    },
+    { width: first.width, height: first.height }
+  )
+}
+
 export type GameLoopOptions = {
   fps: number
 } & Omit<LoopOptions, "engine" | "onDestroy" | "timeInSeconds">

@@ -1,4 +1,4 @@
-import { Vector2d } from "../index"
+import { Size, Vector2d } from "../index"
 import { Buffer } from "buffer"
 
 export class Converter {
@@ -52,5 +52,21 @@ export class Converter {
       typeof base64 !== "string" ? "" : base64,
       "base64"
     ).toString()
+  }
+
+  /**
+   * width --> x
+   * height --> y
+   */
+  static sizeToVector(size: Size): Vector2d {
+    return Vector2d(size?.width, size?.height)
+  }
+
+  /**
+   * x --> width
+   * y --> height
+   */
+  static vectorToSize(vector: Vector2d): Size {
+    return Size(vector?.x, vector?.y)
   }
 }
