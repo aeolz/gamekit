@@ -1,5 +1,6 @@
 import Aeolz from "@aeolz/core"
-import { glob } from "glob"
+import * as fs from "fs"
+import * as path from "path"
 
 export class Loader {
   private static loaders: Loader[] = []
@@ -7,6 +8,31 @@ export class Loader {
   static runLoaders() {
     this.loaders.forEach((loader) => {
       loader.load()
+    })
+  }
+
+  static async loadDirectory(
+    dir: string,
+    allowedExtensions: string[] = []
+  ): Promise<string[]> {
+    return new Promise((res, rej) => {
+      fs.readdir(dir, (err, files) => {
+        if (err) {
+          return rej(err)
+        }
+
+        const matchedFiles = files.filter((file) => {
+          return allowedExtensions?.length === 0
+            ? true
+            : allowedExtensions.some((ext) => file?.endsWith(`.${ext}`))
+        })
+
+        const filePaths = matchedFiles.map((file) => {
+          return path.join(dir, file)
+        })
+
+        res(filePaths)
+      })
     })
   }
 
@@ -36,7 +62,7 @@ export class Loader {
     if (this.once && this.called) return
     this.called = true
     try {
-      const itemPaths = await glob(
+      const itemPaths = await Loader.loadDirectory(
         this.directoryAbsolutePath.replace(/\\/g, "/")
       )
 
