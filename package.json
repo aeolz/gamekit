@@ -1,6 +1,6 @@
 {
   "name": "@aeolz/gamekit",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Aeolz Game Kit",
   "main": "lib/index.js",
   "scripts": {
@@ -37,6 +37,7 @@
   "dependencies": {
     "@aeolz/core": "^1.0.8",
     "anytool": "^1.0.2",
+    "buffer": "^6.0.3",
     "intersects": "^2.7.2"
   }
 }
